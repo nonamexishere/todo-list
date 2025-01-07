@@ -235,3 +235,61 @@ h1 {
   border-radius: 12px;
   border: 2px dashed #e2e8f0;
 }
+
+/* Mobil görünüm için medya sorguları */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .todo-form {
+    flex-direction: column;
+  }
+
+  .todo-input, .deadline-input, .add-button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .todo-text {
+    font-size: 14px;
+  }
+
+  .todo-status {
+    font-size: 12px;
+  }
+
+  .tab-button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .todo-item {
+    padding: 12px;
+  }
+
+  .delete-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .todo-checkbox {
+    width: 18px;
+    height: 18px;
+  }
+
+  .task-count {
+    padding: 1px 6px;
+    font-size: 0.8em;
+  }
+}
