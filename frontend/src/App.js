@@ -174,20 +174,26 @@ function App() {
         </h1>
         
         <form onSubmit={addTodo} className="todo-form">
-          <input
-            type="text"
-            value={newTodo}
-            onChange={(e) => setNewTodo(e.target.value)}
-            placeholder="Yeni görev ekle..."
-            className="todo-input"
-          />
-          <input
-            type="datetime-local"
-            value={deadline}
-            onChange={(e) => setDeadline(e.target.value)}
-            className="deadline-input"
-            min={new Date().toISOString().slice(0, 16)}
-          />
+          <div className="input-group">
+            <input
+              type="text"
+              value={newTodo}
+              onChange={(e) => setNewTodo(e.target.value)}
+              placeholder="Görev açıklaması..."
+              className="todo-input"
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="deadline" className="input-label">Bitiş zamanı seçin</label>
+            <input
+              id="deadline"
+              type="datetime-local"
+              value={deadline}
+              onChange={(e) => setDeadline(e.target.value)}
+              className="deadline-input"
+              min={new Date().toISOString().slice(0, 16)}
+            />
+          </div>
           <button type="submit" className="add-button">
             <span className="button-icon">+</span>
             Ekle
